@@ -1,7 +1,12 @@
+@font-face {
+  font-family: neu;
+  src: url(/font/NeueHaasDisplayMediu.ttf);
+}
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
+  font-family: neu;
 }
 
 body, html {
@@ -10,13 +15,14 @@ body, html {
 }
 
 main #page1 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #efeae3;
   position: relative;
+  padding: 0 2vw;
 }
 main #page1 nav {
-  padding: 2vw 2vw;
+  padding: 2vw 0vw;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -28,17 +34,106 @@ main #page1 nav #nav-part2 {
 }
 main #page1 nav #nav-part2 h4 {
   padding: 10px 20px;
-  border: 1px solid rgba(138, 138, 138, 0.537254902);
+  border: 1px solid rgba(0, 0, 0, 0.2352941176);
   border-radius: 50px;
-  font-family: 500;
+  font-weight: 500;
+  position: relative;
   color: rgba(0, 0, 0, 0.7333333333);
   font-size: 18px;
+  transition: all ease 0.4s;
+  overflow: hidden;
+}
+main #page1 nav #nav-part2 h4 a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7333333333);
   position: relative;
+  z-index: 9;
 }
 main #page1 nav #nav-part2 h4::after {
   content: "";
   position: absolute;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: black;
+  left: 0%;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+main #page1 nav #nav-part2 h4:hover::after {
+  bottom: 0%;
+  border-radius: 0%;
+}
+main #page1 nav #nav-part2 h4:hover a {
+  color: white;
+}
+main #page1 #center {
+  height: 65vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2352941176);
+  padding-bottom: 2.5vw;
+}
+main #page1 #center #left h3 {
+  width: 25vw;
+  font-size: 1.8vw;
+  line-height: 2vw;
+}
+main #page1 #center #right h1 {
+  font-size: 10vw;
+  line-height: 8vw;
+  text-align: right;
+}
+main #page1 #hero-shape {
+  position: absolute;
+  width: 46vw;
+  height: 36vw;
+  right: 0%;
+  top: 65vh;
+}
+main #page1 #hero-shape #hero-1 {
+  background-color: #FE320A;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  filter: blur(20px);
+  position: absolute;
+}
+main #page1 #hero-shape #hero-2 {
+  background-color: #FE320A;
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  filter: blur(20px);
+  position: absolute;
+}
+main #page1 #hero-shape #hero-3 {
+  background-color: #FE320A;
+  height: 30vw;
+  width: 30vw;
+  border-radius: 50%;
+  filter: blur(20px);
+  position: absolute;
+  animation-name: anime1;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+main #page1 video {
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 4vw;
+}
+
+@keyframes anime1 {
+  from {
+    transform: translate(-10%, 10%);
+  }
+  to {
+    transform: translate(10%, -10%);
+  }
 }/*# sourceMappingURL=style.css.map */
