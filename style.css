@@ -14,25 +14,25 @@ body, html {
   height: 100%;
 }
 
-main #page1 {
+#main #page1 {
   min-height: 100vh;
   width: 100%;
   background-color: #efeae3;
   position: relative;
   padding: 0 2vw;
 }
-main #page1 nav {
+#main #page1 nav {
   padding: 2vw 0vw;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-main #page1 nav #nav-part2 {
+#main #page1 nav #nav-part2 {
   display: flex;
   align-items: center;
   gap: 1vw;
 }
-main #page1 nav #nav-part2 h4 {
+#main #page1 nav #nav-part2 h4 {
   padding: 10px 20px;
   border: 1px solid rgba(0, 0, 0, 0.2352941176);
   border-radius: 50px;
@@ -43,13 +43,13 @@ main #page1 nav #nav-part2 h4 {
   transition: all ease 0.4s;
   overflow: hidden;
 }
-main #page1 nav #nav-part2 h4 a {
+#main #page1 nav #nav-part2 h4 a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.7333333333);
   position: relative;
   z-index: 9;
 }
-main #page1 nav #nav-part2 h4::after {
+#main #page1 nav #nav-part2 h4::after {
   content: "";
   position: absolute;
   height: 100%;
@@ -60,14 +60,14 @@ main #page1 nav #nav-part2 h4::after {
   border-radius: 50%;
   transition: all ease 0.4s;
 }
-main #page1 nav #nav-part2 h4:hover::after {
+#main #page1 nav #nav-part2 h4:hover::after {
   bottom: 0%;
   border-radius: 0%;
 }
-main #page1 nav #nav-part2 h4:hover a {
+#main #page1 nav #nav-part2 h4:hover a {
   color: white;
 }
-main #page1 #center {
+#main #page1 #center {
   height: 65vh;
   width: 100%;
   display: flex;
@@ -76,24 +76,24 @@ main #page1 #center {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2352941176);
   padding-bottom: 2.5vw;
 }
-main #page1 #center #left h3 {
+#main #page1 #center #left h3 {
   width: 25vw;
   font-size: 1.8vw;
   line-height: 2vw;
 }
-main #page1 #center #right h1 {
+#main #page1 #center #right h1 {
   font-size: 10vw;
   line-height: 8vw;
   text-align: right;
 }
-main #page1 #hero-shape {
+#main #page1 #hero-shape {
   position: absolute;
   width: 46vw;
   height: 36vw;
   right: 0%;
   top: 65vh;
 }
-main #page1 #hero-shape #hero-1 {
+#main #page1 #hero-shape #hero-1 {
   background-color: #FE320A;
   height: 100%;
   width: 100%;
@@ -102,7 +102,7 @@ main #page1 #hero-shape #hero-1 {
   filter: blur(10px);
   position: absolute;
 }
-main #page1 #hero-shape #hero-2 {
+#main #page1 #hero-shape #hero-2 {
   background: linear-gradient(#FE320A, #fe3f0a);
   height: 30vw;
   width: 30vw;
@@ -115,7 +115,7 @@ main #page1 #hero-shape #hero-2 {
   animation-direction: alternate;
   animation-iteration-count: infinite;
 }
-main #page1 #hero-shape #hero-3 {
+#main #page1 #hero-shape #hero-3 {
   background: linear-gradient(#FE320A, #fe3f0a);
   height: 30vw;
   width: 30vw;
@@ -128,11 +128,49 @@ main #page1 #hero-shape #hero-3 {
   animation-direction: alternate;
   animation-iteration-count: infinite;
 }
-main #page1 video {
+#main #page1 video {
   position: relative;
   width: 100%;
   border-radius: 30px;
   margin-top: 4vw;
+}
+#main #page2 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
+  padding: 8vw 0;
+}
+#main #page2 #moving-text {
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+#main #page2 #moving-text .conteiner {
+  white-space: nowrap;
+  display: inline-block;
+  animation-name: move;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#main #page2 #moving-text .conteiner h1 {
+  font-size: 9vw;
+  display: inline-block;
+}
+#main #page2 #moving-text .conteiner #gola {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: #FE320A;
+  display: inline-block;
+  margin: 1vw 2vw;
+}
+#main #page2 #moving-text::-webkit-scrollbar {
+  display: none;
+}
+#main #page2 #page2-bottom {
+  height: 80vh;
+  width: 100%;
+  background-color: aliceblue;
 }
 
 @keyframes anime1 {
@@ -149,5 +187,13 @@ main #page1 video {
   }
   to {
     transform: translate(-20%, 30%);
+  }
+}
+@keyframes move {
+  from {
+    transform: translatex(0%);
+  }
+  to {
+    transform: translatex(-100%);
   }
 }/*# sourceMappingURL=style.css.map */
