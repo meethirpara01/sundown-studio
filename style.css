@@ -24,6 +24,20 @@ body, html {
   height: 100%;
 }
 
+#fixed-image {
+  height: 30vw;
+  width: 24vw;
+  background-color: red;
+  border-radius: 20px;
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  top: 25%;
+  display: none;
+  background-size: cover;
+  background-position: center;
+}
+
 #main #page1 {
   min-height: 100vh;
   width: 100%;
@@ -221,9 +235,36 @@ body, html {
   animation-timing-function: ease-in-out;
 }
 #main #page3 {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #efeae3;
+  padding: 4vw 0;
+}
+#main #page3 .elem {
+  height: 150px;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid rgba(56, 56, 56, 0.3921568627);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 0 2vw;
+}
+#main #page3 .elem .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #ff9831;
+  position: absolute;
+  left: 0%;
+  top: -100%;
+  transition: all ease 0.2s;
+}
+#main #page3 .elem h2 {
+  font-size: 3vw;
+  z-index: 9;
+}
+#main #page3 .elem:hover .overlay {
+  top: 0%;
 }
 
 @keyframes gooey {
